@@ -1,19 +1,12 @@
 def solution(A):
-    A.sort()
-    N = len(A)
-    i=0
-    while i<N:
-        try:
-            if A[i] ==A[i+1]:
-                i+=2
-            else:
-                return A[i]
-        except:
-            return A[N-1]
+    odd = 0
+    for i in A:
+        odd^=i 
+        return odd
 
 
 
 if __name__ == "__main__":
-    A = [1,2,1,2,1,4,2,1,2,5]
+    A = [1,2,1,2,1,2,1,2]
     X=solution(A)
     print (X)
