@@ -1,9 +1,8 @@
+import math
 def solution(X,Y,D):
-    if (Y-X)%D ==0:
-        ans = (Y-X)//D
-        return ans
-    else:
-        return ((Y-X)//D)+1
+    distance = Y-X
+    return math.ceil(distance/D)
+
 if __name__ =="__main__":
     X=10
     Y=85
